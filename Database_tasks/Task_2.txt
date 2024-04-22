@@ -1,0 +1,8 @@
+scooter_rent=# SELECT track,
+scooter_rent-# CASE
+scooter_rent-# WHEN finished = True THEN 2
+scooter_rent-# WHEN cancelled = True THEN -1
+scooter_rent-# WHEN "inDelivery" = True THEN 1
+scooter_rent-# ELSE 0
+scooter_rent-# END AS status
+scooter_rent-# FROM "Orders";
